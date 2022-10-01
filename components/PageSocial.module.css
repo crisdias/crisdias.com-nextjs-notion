@@ -86,6 +86,13 @@
   border-color: #2795e9;
 }
 
+.instagram .actionBgPane {
+  background: #F20006;
+}
+.instagram:hover {
+  border-color: #F20006;
+}
+
 .linkedin .actionBgPane {
   background: #0077b5;
 }
@@ -126,6 +133,13 @@
 }
 .email:hover {
   border-color: #777;
+}
+
+.podcast .actionBgPane {
+  background: #A24C65;
+}
+.podcast:hover {
+  border-color: #A24C65;
 }
 
 @media only screen and (max-width: 768px) {

@@ -1,9 +1,11 @@
 import * as React from 'react'
 import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter'
+import { FaInstagram } from '@react-icons/all-files/fa/FaInstagram'
 import { FaZhihu } from '@react-icons/all-files/fa/FaZhihu'
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
 import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin'
 import { FaEnvelopeOpenText } from '@react-icons/all-files/fa/FaEnvelopeOpenText'
+import { FaPodcast } from '@react-icons/all-files/fa/FaPodcast'
 import { FaYoutube } from '@react-icons/all-files/fa/FaYoutube'
 import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
 import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
@@ -48,7 +50,7 @@ export const FooterImpl: React.FC = () => {
           </a>
         )}
       </div>
-
+      
       <div className={styles.social}>
         {config.twitter && (
           <a
@@ -59,6 +61,18 @@ export const FooterImpl: React.FC = () => {
             rel='noopener noreferrer'
           >
             <FaTwitter />
+          </a>
+        )}
+
+        {config.instagram && (
+          <a
+            className={styles.instagram}
+            href={`https://instagram.com/${config.instagram}`}
+            title={`Instagram @${config.instagram}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaInstagram />
           </a>
         )}
 
@@ -114,11 +128,23 @@ export const FooterImpl: React.FC = () => {
           <a
             className={styles.youtube}
             href={`https://www.youtube.com/${config.youtube}`}
-            title={`YouTube ${config.author}`}
+            title={`Podcast ${config.author}`}
             target='_blank'
             rel='noopener noreferrer'
           >
             <FaYoutube />
+          </a>
+        )}
+
+        {config.podcast && (
+          <a
+            className={styles.podcast}
+            href={`${config.podcast}`}
+            title={`Newsletter ${config.author}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaPodcast />
           </a>
         )}
       </div>

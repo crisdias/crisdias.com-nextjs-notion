@@ -2,25 +2,28 @@ import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: '7875426197cf461698809def95960ebf',
+  rootNotionPageId: '82d41d9e981b42fd88a22f6703d9a5fe',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'Next.js Notion Starter Kit',
+  name: 'O jardim digital do Cris Dias',
   domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
-  author: 'Travis Fischer',
+  author: 'Cris Dias',
 
   // open graph metadata (optional)
-  description: 'Example Next.js Notion Starter Kit Site',
+  description: 'Nem só de sites em ordem cronológica vive a internet',
 
   // social usernames (optional)
-  twitter: 'transitive_bs',
-  github: 'transitive-bullshit',
-  linkedin: 'fisch2',
-  // newsletter: '#', // optional newsletter URL
+  twitter: 'crisdias',
+  // github: 'crisdias',
+  linkedin: 'crisdias',
+  // newsletter: 'https://www.boanoiteinternet.com.br/',
+  podcast: 'https://www.boanoiteinternet.com.br/',
+  instagram: 'crisdias',
+
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
 
   // default notion icon and cover images for site-wide consistency (optional)
