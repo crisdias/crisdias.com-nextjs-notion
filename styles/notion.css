@@ -28,6 +28,8 @@
 
 .notion-text {
   padding: 0.5em 2px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.1em;
 }
 
 .notion-asset-caption {
@@ -395,6 +397,17 @@
   display: none;
 }
 
+.notion-collection-header {
+  display: none;
+}
+
+.notion-gallery-grid {
+  border-top: none;
+}
+
+.notion-h {
+  font-weight: 700;
+}
 
 /* .notion-h {
   font-family: Lato, sans-serif;

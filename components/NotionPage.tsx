@@ -247,6 +247,9 @@ export const NotionPage: React.FC<types.PageProps> = ({
     getPageProperty<string>('Description', block, recordMap) ||
     config.description
 
+  const isGalleryPage = getPageProperty<string>('IsGallery', block, recordMap) ||
+    false
+
   return (
     <>
       <PageHead
@@ -264,7 +267,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
       <NotionRenderer
         bodyClassName={cs(
           styles.notion,
-          pageId === site.rootNotionPageId && 'index-page'
+          (pageId === site.rootNotionPageId || isGalleryPage) && 'index-page'
         )}
         darkMode={isDarkMode}
         components={components}
