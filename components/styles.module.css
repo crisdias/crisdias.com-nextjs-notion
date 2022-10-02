@@ -94,7 +94,11 @@
 }
 
 .instagram:hover {
-  color: #2795e9;
+  color: #F20006;
+}
+
+.podcast:hover {
+  color: #993955;
 }
 
 .zhihu:hover {
@@ -217,3 +221,4 @@
 .hidden {
   visibility: hidden;
 }
+

@@ -9,6 +9,7 @@
   "engines": {
     "node": ">=14.17"
   },
+  "homepage": "https://jardim.crisdias.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

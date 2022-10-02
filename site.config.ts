@@ -10,7 +10,7 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'O jardim digital do Cris Dias',
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
+  domain: 'jardim.crisdias.com',
   author: 'Cris Dias',
 
   // open graph metadata (optional)
