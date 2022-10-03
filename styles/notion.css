@@ -12,8 +12,6 @@
   --notion-max-width: 720px;
   --notion-header-height: 54px;
 
-  /* font-family: Georgia, 'Times New Roman', Times, serif; */
-  /* font-size: 18px; */
   font-family: 'Inter Tight', sans-serif;
 }
 
@@ -28,7 +26,7 @@
 
 .notion-text {
   padding: 0.5em 2px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Inter Tight', sans-serif;
   font-size: 1.1em;
 }
 
@@ -411,9 +409,6 @@
   font-weight: 700;
 }
 
-/* .notion-h {
-  font-family: Lato, sans-serif;
-  color: #7b4a1b;
-  border-bottom: 1px solid #ccc;
-  width: 100%;
-} */
+.notion-serif .notion-text, .notion-serif .notion-list, .notion-serif .notion-quote {
+  font-family: "Lora", "Georgia", "Times New Roman", "Times", serif !important;
+}
