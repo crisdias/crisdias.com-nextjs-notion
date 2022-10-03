@@ -68,6 +68,8 @@
 .notion-gallery-grid .notion-page-title-text {
   font-size: 2em;
   white-space: unset;
+  font-weight: 700;
+  font-family: 'Barlow', sans-serif;
 }
 
 .notion-gallery-grid .notion-collection-card-property {
@@ -171,10 +173,10 @@
 .notion-title {
   display: block;
   text-align: center;
-  font-weight: 400;
-  font-family: Lato, sans-serif;
-  font-family: 'Alfa Slab One', cursive;
-  color: #666;
+  font-weight: 700;
+  font-family: 'Barlow', sans-serif;
+  color: #333;
+  font-size: 3em;
 }
 
 .notion-collection-row {
@@ -359,7 +361,7 @@
   border-radius: 50%;
   box-shadow: 0 8px 40px 0 rgb(0 0 0 / 21%);
   background-color: white;
-  border: 6px solid #333;
+  /* border: 6px solid #333; */
 }
 .notion-page-icon-hero.notion-page-icon-image span,
 .notion-page-icon-hero.notion-page-icon-image img {
