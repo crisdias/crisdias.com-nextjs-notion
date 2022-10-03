@@ -15,7 +15,7 @@ export default siteConfig({
   author: 'Cris Dias',
 
   // open graph metadata (optional)
-  description: 'Nem só de sites em ordem cronológica vive a internet',
+  description: 'Nem só de sites em ordem cronológica vive a internet. Anotações, guias umas mudinhas de planta.',
 
   // social usernames (optional)
   twitter: 'crisdias',

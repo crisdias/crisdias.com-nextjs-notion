@@ -128,9 +128,14 @@
   "resolved" "https://registry.npmjs.org/@next/env/-/env-12.2.3.tgz"
   "version" "12.2.3"
 
-"@next/swc-win32-x64-msvc@12.2.3":
-  "integrity" "sha512-huSNb98KSG77Kl96CoPgCwom28aamuUsPpRmn/4s9L0RNbbHVSkp9E6HA4yOAykZCEuWcdNsRLbVVuAbt8rtIw=="
-  "resolved" "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.2.3.tgz"
+"@next/swc-linux-x64-gnu@12.2.3":
+  "integrity" "sha512-MbFI6413VSXiREzHwYD8YAJLTknBaC+bmjXgdHEEdloeOuBFQGE3NWn3izOCTy8kV+s98VDQO8au7EKKs+bW0g=="
+  "resolved" "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-12.2.3.tgz"
+  "version" "12.2.3"
+
+"@next/swc-linux-x64-musl@12.2.3":
+  "integrity" "sha512-jMBD0Va6fInbPih/dNySlNY2RpjkK6MXS+UGVEvuTswl1MZr+iahvurmshwGKpjaRwVU4DSFMD8+gfWxsTFs1Q=="
+  "resolved" "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-12.2.3.tgz"
   "version" "12.2.3"
 
 "@nodelib/fs.scandir@2.1.5":
@@ -1045,7 +1050,7 @@
   "resolved" "https://registry.npmjs.org/chownr/-/chownr-1.1.4.tgz"
   "version" "1.1.4"
 
-"chrome-aws-lambda@6.0.0":
+"chrome-aws-lambda@^10.1.0":
   "integrity" "sha512-XnFo6AaE5ZYpHYmOmMoj1yCYFeRTx6uFCpJnVuDREWzXevzZvo3gzkyQ6qSKsPW91VGWeQI7wQgnOpW50e+Dzg=="
   "resolved" "https://registry.npmjs.org/chrome-aws-lambda/-/chrome-aws-lambda-6.0.0.tgz"
   "version" "6.0.0"
@@ -2335,7 +2340,7 @@
   dependencies:
     "commander" "^8.0.0"
 
-"keyv@npm:@keyvhq/core@~1.6.6":
+"keyv@^4.0.0":
   "integrity" "sha512-NQtjFKsZXLYs3SWbeYATdwwJ1fZtzwrV+9YM4Y9JPGGQqLI0q6gyY2sEWI4RvrKBGJ1AXCJPQNXOPr8oAWdEDw=="
   "resolved" "https://registry.npmjs.org/@keyvhq/core/-/core-1.6.14.tgz"
   "version" "1.6.14"
@@ -3143,7 +3148,7 @@
   "resolved" "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz"
   "version" "2.1.1"
 
-"puppeteer-core@6.0.0":
+"puppeteer-core@^10.4.0", "puppeteer-core@6.0.x":
   "integrity" "sha512-Mm4lVSM8CJUrHSLt2zHjlW9B2D5B3JRbkbmxzGaGTauaB9gTrM+r7gk88xfRWuaBy81pRG+nTtCBdMPzO7pjqg=="
   "resolved" "https://registry.npmjs.org/puppeteer-core/-/puppeteer-core-6.0.0.tgz"
   "version" "6.0.0"
