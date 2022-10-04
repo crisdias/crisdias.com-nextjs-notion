@@ -359,8 +359,15 @@
   border-radius: 50%;
   box-shadow: 0 8px 40px 0 rgb(0 0 0 / 21%);
   background-color: white;
-  /* border: 6px solid #333; */
 }
+
+@media only screen and (max-width: 600px) {
+  .notion-page-icon-hero.notion-page-icon-image {
+    width:  110px;
+    height: 110px;
+  }
+}
+
 .notion-page-icon-hero.notion-page-icon-image span,
 .notion-page-icon-hero.notion-page-icon-image img {
   border-radius: 50%;
