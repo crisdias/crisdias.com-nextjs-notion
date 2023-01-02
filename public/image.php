@@ -2,6 +2,7 @@
   // display errors on
   // ini_set('display_errors', 1);
   // header('Content-Type: text/plain');
+  // header("Access-Control-Allow-Origin: *");
 
   // get the image from querystring, then redirect to the image
   $image = $_GET['url'];
@@ -11,7 +12,7 @@
 
   // print the value of $image;
   // echo "-->";
-  // print_r( $image );
+  // print_r( $_GET );
   // return;
 
  // check if _cdn folder exists in the app root, if not create it
@@ -32,9 +33,13 @@
 
   // redirect to path
   // echo("Location: /$path");
-  header("Location: $path");
 
- 
+  // if request url contains "_cdn" then redirect to the image
+  if (strpos($_SERVER['REQUEST_URI'], '_cdn') !== false) {
+    header("Location: $filename");
+  } else {
+    header("Location: /$path");
+  }
 
 
 ?>
