@@ -24,6 +24,7 @@ export default siteConfig({
   // newsletter: 'https://www.boanoiteinternet.com.br/',
   podcast: 'https://www.boanoiteinternet.com.br/',
   instagram: 'crisdias',
+  mastodon: 'https://ursal.zone/@crisdias',
 
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
 
