@@ -1,6 +1,7 @@
 import * as React from 'react'
 import dynamic from 'next/dynamic'
-import Image from 'next/image'
+
+import Image from 'my_image_loader'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -20,15 +21,14 @@ import { searchNotion } from '@/lib/search-notion'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
 import { Footer } from './Footer'
-import { GitHubShareButton } from './GitHubShareButton'
+// import { GitHubShareButton } from './GitHubShareButton'
 import { Loading } from './Loading'
 import { NotionPageHeader } from './NotionPageHeader'
 import { Page404 } from './Page404'
 import { PageAside } from './PageAside'
-import { Footer } from './Footer'
-import { NotionPageHeader } from './NotionPageHeader'
 // import { GitHubShareButton } from './GitHubShareButton'
 
+import { PageHead } from './PageHead'
 import styles from './styles.module.css'
 
 // -----------------------------------------------------------------------------
@@ -236,7 +236,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
   const canonicalPageUrl =
     !config.isDev && getCanonicalPageUrl(site, recordMap)(pageId)
 
-  const isSerif = (block as PageBlock).format?.page_font === 'serif'
+  // const isSerif = (block as PageBlock).format?.page_font === 'serif'
 
   const socialImage = mapImageUrl(
     getPageProperty<string>('Social Image', block, recordMap) ||
@@ -270,7 +270,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         bodyClassName={cs(
           styles.notion,
           (pageId === site.rootNotionPageId || isGalleryPage) && 'index-page',
-          isSerif && 'notion-serif',
+          // isSerif && 'notion-serif',
         )}
         darkMode={isDarkMode}
         components={components}

@@ -173,7 +173,7 @@
   text-align: center;
   font-weight: 700;
   font-family: 'Barlow', sans-serif;
-  color: #333;
+  color: var(--fg-color);
   font-size: 3em;
 }
 
