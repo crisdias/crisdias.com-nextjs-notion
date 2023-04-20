@@ -4,6 +4,16 @@
   // header('Content-Type: text/plain');
   // header("Access-Control-Allow-Origin: *");
 
+  function getExt($src) {
+    $substring = '%3F';
+    $index = strpos($src, $substring);
+    if ($index === false) {
+        return $src;
+    }
+    return substr($src, 0, $index);
+}
+
+
   // get the image from querystring, then redirect to the image
   $image = $_GET['url'];
     if (empty($image)) {
@@ -22,9 +32,13 @@
 
   // md5 the url
   $md5 = md5($image);
-  $ext = explode('?',pathinfo($image, PATHINFO_EXTENSION))[0];
+  $ext = getExt(explode('?',pathinfo($image, PATHINFO_EXTENSION))[0]);
   $filename = $md5 . '.' . $ext;
   $path = '_cdn/' . $filename;
+  // echo "<pre>path --> ";
+  // print_r( $path );
+  // echo "</pre>";
+  // return;
 
   // download url as $path if file does not exist
   if (!file_exists($path)) {

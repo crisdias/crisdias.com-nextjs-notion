@@ -16,12 +16,28 @@ export function myImageLoader({ src }) {
   // }
 
   const md5 = crypto.createHash('md5').update(src).digest('hex');
-  const ext = src.split('.').pop().split('?')[0];
+  const ext = getSrcBeforeQuestionMark(src.split('.').pop().split('?')[0]);
   const filename = md5 + '.' + ext;
 
-  return `https://jardim.crisdias.com/_cdn/${filename}?url=${encodeURIComponent(src)}`
+  console.log({src});
+
+  const ret = `https://jardim.crisdias.com/_cdn/${filename}?url=${encodeURIComponent(src)}`;
+  console.log({ ext });
+  console.log({ filename });
+  console.log({ret});
+
+  return ret;
   // return `https://jardim.crisdias.com/image.php?url=${encodeURIComponent(src)}`
   // return `http://127.0.0.1:8080/image.php?url=${encodeURIComponent(src)}`
+}
+
+function getSrcBeforeQuestionMark(src) {
+  const index = src.indexOf('%3F');
+  if (index === -1) {
+    return src;
+  } else {
+    return src.substring(0, index);
+  }
 }
 
 const MyImage = (props) => {
