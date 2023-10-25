@@ -3,11 +3,11 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
 })
 
-module.exports = withBundleAnalyzer({
-  staticPageGenerationTimeout: 300,
-  experimental: {
-    images: {
-      unoptimized: true,
-    },
+
+
+module.exports = {
+  images: {
+    loader: 'custom',
+    loaderFile: './my_image_loader.js',
   },
-})
+}

@@ -1,0 +1,15 @@
+node_modules/notion-types/build/block.d.ts
+> @@ -156,6 +156,7 @@ export interface BasePageBlock extends BaseBlock {
+     page_cover?: string
+     page_icon?: string
+     block_color?: Color
++    page_font?: string
+
+
+
+https://crisdias.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4b613ad3-61be-4488-871a-a0d9371f99d5%2Fcrisdias_dark_wizard_ea59f6a0-452c-4ed8-970a-5017ddd326d5.png?table=block&id=173f8fa0-be93-4040-9160-540d0a41004c&spaceId=f9d5797e-b53e-4824-b74d-3eaa837c13c6&width=2000&userId=&cache=v2
+https://www.notion.so/image/https://s3-us-west-2.amazonaws.com/secure.notion-static.com/904aed9d-8100-4bd0-bdbb-e5d708ff7d8e/crisdias_steampunk_typewriter_205420d6-d186-4b82-8a9e-f34bfaae1a76.png?table=block&id=0302c9a9-82e2-41ac-aa20-a4fb211c653e&cache=v2'
+
+https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F971568ac-b26a-4fb1-bafb-6cf15e27d2d4%2Fcrisdias_bear_faf8dc33-770b-4cea-9247-a98e7f64247d.png?table=block&id=a6b2fdff-7af8-4601-9457-92f5f83f5551&cache=v2
+https://www.notion.so/image/https://s3-us-west-2.amazonaws.com/secure.notion-static.com/904aed9d-8100-4bd0-bdbb-e5d708ff7d8e/crisdias_steampunk_typewriter_205420d6-d186-4b82-8a9e-f34bfaae1a76.png?table=block&id=0302c9a9-82e2-41ac-aa20-a4fb211c653e&cache=v2
+
