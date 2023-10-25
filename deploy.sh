@@ -7,7 +7,7 @@ cd out && zip ../out.zip *.html && cd ..
 
 
 mkdir out/_cdn
-# node postprocessor.js
+node postprocessor.js
 # rsync -avz --delete --exclude-from=exclude.txt ./out/ diascris@crisdias.com:jardim.crisdias.com/
 
-# unzip out.zip -d out
+# unzip -o out.zip -d out

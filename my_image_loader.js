@@ -16,6 +16,8 @@ export function myImageLoader({ src, width: w, quality }) {
   //   return src
   // }
 
+  return src;
+
   const md5 = crypto.createHash('md5').update(src).digest('hex');
   const ext = getSrcBeforeQuestionMark(src.split('.').pop().split('?')[0]);
   const filename = md5 + '.' + ext;
