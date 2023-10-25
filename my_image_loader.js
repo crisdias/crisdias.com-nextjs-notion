@@ -9,16 +9,20 @@ const crypto = require('crypto');
 //   return `https://jardim.crisdias.com/_cdn/${filename}.${ext}`
 // }
 
-export function myImageLoader({ src, width: w, quality }) {
+const myImageLoader = ({ src, width: w, quality }) => {
+  // CHECK if next is in development mode
+  let baseURL = 'https://jardim.crisdias.com/_cdn';
+  if (process.env.NODE_ENV === 'development') {
+    baseURL = 'http://localhost:8000';
+  }
+
   const q = quality || 75;
-  // url encode the src
-  // if (process.env.NODE_ENV === 'development') {
-  //   return src
-  // }
+  const base64URL = Buffer.from(src).toString('base64');
+  const slashToPipe = base64URL.replace(/\//g, '|');
 
-  return src;
+  const newURL = baseURL + '/' + w + '/' + q + '/' + slashToPipe;
+  return newURL;
 
-  const md5 = crypto.createHash('md5').update(src).digest('hex');
   const ext = getSrcBeforeQuestionMark(src.split('.').pop().split('?')[0]);
   const filename = md5 + '.' + ext;
 

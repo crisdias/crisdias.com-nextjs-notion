@@ -8,6 +8,21 @@
 module.exports = {
   images: {
     loader: 'custom',
-    loaderFile: './my_image_loader.js',
   },
 }
+
+// const { PHASE_PRODUCTION_BUILD } = require('next/constants')
+
+// module.exports = (phase, { defaultConfig }) => {
+//   if (phase === PHASE_PRODUCTION_BUILD) {
+//     return {
+//         images: {
+//           unoptimized: true,
+//           loader: 'custom',
+//           loaderFile: './my_image_loader.js'
+//         },
+//       }
+//     } else {
+//       return {}
+//     }
+//   }

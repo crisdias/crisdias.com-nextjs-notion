@@ -38,3 +38,4 @@ yarn-error.log*
 # vercel
 .vercel
 out.zip
+public/_cdn/images
