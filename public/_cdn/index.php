@@ -13,6 +13,16 @@ if (!isset($_SERVER['REQUEST_URI'])) {
     exit;
 }
 
+// Caminho para a pasta de imagens
+$imagesDir = __DIR__ . '/images/';
+
+// Verifique se a pasta "images" existe e crie-a se não existir
+if (!file_exists($imagesDir)) {
+    if (!mkdir($imagesDir, 0755) && !is_dir($imagesDir)) {
+        throw new \RuntimeException(sprintf('Directory "%s" was not created', $imagesDir));
+    }
+}
+
 $parts = explode('/', $_SERVER['REQUEST_URI']);
 
 if ($parts[1] == '_cdn') {
@@ -81,7 +91,7 @@ if (file_exists($imagePath . '.webp')) {
 $imageData = file_get_contents($src);
 if ($imageData === false) {
     http_response_code(500);
-    echo 'Não foi possível baixar a imagem.';
+    echo 'Não foi possível baixar a imagem:' . $src;
     exit;
 }
 
@@ -120,10 +130,10 @@ switch ($size['mime']) {
 // Redimensionar a imagem para a largura especificada
 $height = ($size[1] / $size[0]) * $width;
 $imageResized = imagescale($image, $width, $height);
-imagedestroy($image);
 
 // Converter a imagem para WebP e salvar
 imagewebp($imageResized, $imagePath . '.webp', $quality);
+imagedestroy($image);
 imagedestroy($imageResized);
 
 // Devolva a imagem WebP na requisição
