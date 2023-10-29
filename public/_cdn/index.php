@@ -84,7 +84,6 @@ if ($src === false) {
 
 // Gere um ID único usando md5 de $_SERVER['REQUEST_URI']
 $uniqueID = md5("$width/$quality/$src");
-$uniqueID = md5("$src"); // podemos ignorar os outros dois porque não estamos fazendo nada com eles
 $imagePath = __DIR__ . '/images/' . $uniqueID;
 
 // Verifique se a imagem já existe
