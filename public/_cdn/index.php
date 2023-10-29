@@ -3,6 +3,10 @@
 // Desativar exibição de erros
 ini_set('display_errors', 0);
 
+// require_once __DIR__ . '/cors.php';
+// cors();
+
+
 // max execution time in seconds
 ini_set('max_execution_time', 60);
 
@@ -71,6 +75,7 @@ if ($width === false || $quality === false) {
 $src = substr($src, 1);
 $src = urldecode($src);
 
+
 if ($src === false) {
     // http_response_code(400);
     echo 'URL inválida. (SRC)';
@@ -78,7 +83,8 @@ if ($src === false) {
 }
 
 // Gere um ID único usando md5 de $_SERVER['REQUEST_URI']
-$uniqueID = md5($_SERVER['REQUEST_URI']);
+$uniqueID = md5("$width/$quality/$src");
+$uniqueID = md5("$src"); // podemos ignorar os outros dois porque não estamos fazendo nada com eles
 $imagePath = __DIR__ . '/images/' . $uniqueID;
 
 // Verifique se a imagem já existe
@@ -135,9 +141,14 @@ switch ($size['mime']) {
         exit;
 }
 
-// Redimensionar a imagem para a largura especificada
-$height = ($size[1] / $size[0]) * $width;
-$imageResized = imagescale($image, $width, $height);
+// Redimensionar a imagem para a largura especificada, mas somente se a largura for maior que a largura original
+if ($size[0] <= $width) {
+    $height = ($size[1] / $size[0]) * $width;
+    $imageResized = imagescale($image, $width, $height);
+} else {
+    $imageResized = $image;
+}
+
 
 // Converter a imagem para WebP e salvar
 imagewebp($imageResized, $imagePath . '.webp', $quality);
