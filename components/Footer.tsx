@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter'
+// import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter'
 import { FaInstagram } from '@react-icons/all-files/fa/FaInstagram'
 import { FaZhihu } from '@react-icons/all-files/fa/FaZhihu'
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
@@ -20,6 +20,7 @@ import styles from './styles.module.css'
 export const FooterImpl: React.FC = () => {
   const [hasMounted, setHasMounted] = React.useState(false)
   const { isDarkMode, toggleDarkMode } = useDarkMode()
+  const anoAtual = new Date().getFullYear();
 
   const onToggleDarkMode = React.useCallback(
     (e) => {
@@ -35,7 +36,7 @@ export const FooterImpl: React.FC = () => {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.copyright}>Copyright 2022 {config.author}</div>
+      <div className={styles.copyright}>Copyright {anoAtual} {config.author}</div>
 
       <div className={styles.settings}>
         {hasMounted && (
@@ -50,20 +51,8 @@ export const FooterImpl: React.FC = () => {
           </a>
         )}
       </div>
-      
-      <div className={styles.social}>
-        {config.twitter && (
-          <a
-            className={styles.twitter}
-            href={`https://twitter.com/${config.twitter}`}
-            title={`Twitter @${config.twitter}`}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaTwitter />
-          </a>
-        )}
 
+      <div className={styles.social}>
         {config.instagram && (
           <a
             className={styles.instagram}
@@ -75,6 +64,20 @@ export const FooterImpl: React.FC = () => {
             <FaInstagram />
           </a>
         )}
+
+        {/* {config.twitter && (
+          <a
+            className={styles.twitter}
+            href={`https://twitter.com/${config.twitter}`}
+            title={`Twitter @${config.twitter}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaTwitter />
+          </a>
+        )} */}
+
+
 
         {config.zhihu && (
           <a

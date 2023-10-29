@@ -135,6 +135,13 @@
   margin-bottom: 0.25em;
 }
 
+.dark-mode .notion-h1,
+.dark-mode .notion-h2,
+.dark-mode .notion-h3,
+.dark-mode .notion-title {
+  color: var(--fg-color);
+}
+
 .notion-callout {
   margin: 0.75em 0;
 }

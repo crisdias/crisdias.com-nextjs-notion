@@ -22,8 +22,8 @@ export default siteConfig({
   // github: 'crisdias',
   linkedin: 'crisdias',
   // newsletter: 'https://www.boanoiteinternet.com.br/',
-  podcast: 'https://www.boanoiteinternet.com.br/',
   instagram: 'crisdias',
+  podcast: 'https://www.boanoiteinternet.com.br/',
 
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
 

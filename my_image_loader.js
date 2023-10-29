@@ -9,9 +9,10 @@ const myImageLoader = ({ src, width: w, quality }) => {
 
   const q = quality || 75;
   const base64URL = Buffer.from(src).toString('base64');
-  const slashToPipe = base64URL.replace(/\//g, '|');
+  const urlencodedURL = encodeURIComponent(base64URL);
+  // const slashToPipe = base64URL.replace(/\//g, '|');
 
-  const newURL = baseURL + '/' + w + '/' + q + '/' + slashToPipe;
+  const newURL = baseURL + '/' + w + '/' + q + '/' + urlencodedURL;
   return newURL;
 
 }

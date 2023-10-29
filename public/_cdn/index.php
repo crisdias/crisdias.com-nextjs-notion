@@ -61,7 +61,8 @@ if ($width === false || $quality === false) {
 }
 
 // Decodificar o SRC de Base64 para texto normal
-$src = base64_decode(str_replace('|', '/', $src));
+// $src = base64_decode(str_replace('%7C', '|', $src));
+$src = base64_decode(urldecode($src));
 
 if ($src === false) {
     http_response_code(400);
@@ -103,7 +104,7 @@ file_put_contents($tempImagePath, $imageData);
 $size = getimagesize($tempImagePath);
 if ($size === false) {
     http_response_code(500);
-    echo 'Não foi possível obter as informações da imagem.';
+    echo 'Não foi possível obter as informações da imagem:' . $src . "\n" . $parts[2];
     unlink($tempImagePath);
     exit;
 }
