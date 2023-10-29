@@ -6,6 +6,9 @@ ini_set('display_errors', 0);
 // max execution time in seconds
 ini_set('max_execution_time', 60);
 
+// echo $_GET['u'];
+// exit;
+
 // Verificar se REQUEST_URI está definido
 if (!isset($_SERVER['REQUEST_URI'])) {
     http_response_code(400);
@@ -62,10 +65,14 @@ if ($width === false || $quality === false) {
 
 // Decodificar o SRC de Base64 para texto normal
 // $src = base64_decode(str_replace('%7C', '|', $src));
-$src = base64_decode(urldecode($src));
+// $src = base64_decode(urldecode($src));
+
+# remove first char of $src "?"
+$src = substr($src, 1);
+$src = urldecode($src);
 
 if ($src === false) {
-    http_response_code(400);
+    // http_response_code(400);
     echo 'URL inválida. (SRC)';
     exit;
 }
@@ -92,7 +99,7 @@ if (file_exists($imagePath . '.webp')) {
 $imageData = file_get_contents($src);
 if ($imageData === false) {
     http_response_code(500);
-    echo 'Não foi possível baixar a imagem:' . $src;
+    echo "Não foi possível baixar a imagem:\n" . $src;
     exit;
 }
 

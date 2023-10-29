@@ -8,11 +8,12 @@ const myImageLoader = ({ src, width: w, quality }) => {
   }
 
   const q = quality || 75;
-  const base64URL = Buffer.from(src).toString('base64');
-  const urlencodedURL = encodeURIComponent(base64URL);
+  // const base64URL = Buffer.from(src).toString('base64');
+  const urlencodedURL = encodeURIComponent(src);
   // const slashToPipe = base64URL.replace(/\//g, '|');
 
-  const newURL = baseURL + '/' + w + '/' + q + '/' + urlencodedURL;
+  const newURL = baseURL + '/' + w + '/' + q + '/?' + urlencodedURL;
+  // const newURL = baseURL + '/index.php?u=' + urlencodedURL;
   return newURL;
 
 }
